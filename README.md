@@ -22,7 +22,7 @@ INSERT INTO perusahaan (id_p, nama, alamat) VALUES
 ```
 ### *Output Tabel Perusahaan :*
 
-![](Foto/perusahaan.png)
+![](Foto/tabelperusahaan.png)
 
 ### *Tabel Departemen*
 ```sql
