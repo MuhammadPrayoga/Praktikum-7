@@ -1,9 +1,11 @@
 # Praktikum-7
 
 ## ER-D
+
 ![](Foto/erd.png)
 
 ## Data
+
 ![](Foto/data.png)
 
 ### *Tabel Perusahaan*
@@ -19,6 +21,7 @@ INSERT INTO perusahaan (id_p, nama, alamat) VALUES
 ('P02', 'Cabang Bekasi', NULL);
 ```
 ### *Output Tabel Perusahaan :*
+
 ![](Foto/perusahaan.png)
 
 ### *Tabel Departemen*
@@ -39,7 +42,7 @@ INSERT INTO Departemen (id_dept, nama, id_p, manajer_nik) VALUES
 ```
 
 ### *Output Tabel Departemen :*
-![](FOto/departemen.png)
+![](Foto/departemen.png)
 
 ### *Tabel Karyawan*
 ```sql
@@ -118,6 +121,7 @@ SELECT * FROM karyawan
 WHERE id_dept = (SELECT id_dept FROM karyawan WHERE nama = 'Dika);
 ```
 *Output :*
+
 ![](Foto/1.png)
 
 ### 2. Tampilkan data karyawan yang gajinya lebih besar dari rata-rata gaji semua karyawan. urutkan menurun berdasarkan besaran gaji
@@ -127,6 +131,7 @@ WHERE gaji_pokok > (SELECT AVG(gaji_pokok) FROM karyawan
 ORDER BY gaji_pokok ASC);
 ```
 *Output :*
+
 ![](Foto/2.png)
 
 ### 3. Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja di department yang sama dengan karyawan dengan nama yang mengandung huruf 'K'.
@@ -135,6 +140,7 @@ SELECT nik, nama FROM karyawan
 WHERE id_dept IN (SELECT id_dept FROM karyawan WHERE nama LIKE '%K%');
 ```
 *Output :*
+
 ![](Foto/3.png)
 
 ### 4. Tampilkan data karyawan yang bekerja pada departemen yang ada di kantor pusat.
@@ -143,6 +149,7 @@ SELECT * FROM karyawan
 WHERE id_dept IN (SELECT id_dept FROM departemen WHERE id_p = 'P01');
 ```
 *Output :*
+
 ![](Foto/4.png)
 
 ### 5. Tampilkan nik dan nama karyawan untuk semua karyawan yang bekerja didepartment yang sama dengan karyawan dengan nama yang mengandung huruf 'K' dan yang gajinya lebih besar dari rata-rata gaji semua karyawan
@@ -152,4 +159,5 @@ WHERE id_dept IN (SELECT id_dept FROM karyawan WHERE nama LIKE '%K%')
 AND gaji_pokok > (SELECT AVG(gaji_pokok) FROM karyawan);
 ```
 *Output :*
+
 ![](Foto/5.png)
