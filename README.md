@@ -118,7 +118,7 @@ INSERT INTO project_detail (id_proj, nik) VALUES
 ### 1. Tampilkan data karyawan yang bekerja pada departemen yang sama dengan karyawan yang bernama Dika
 ```sql
 SELECT * FROM karyawan
-WHERE id_dept = (SELECT id_dept FROM karyawan WHERE nama = 'Dika);
+WHERE id_dept = (SELECT id_dept FROM karyawan WHERE nama = 'Dika');
 ```
 *Output :*
 
